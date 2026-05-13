@@ -18,7 +18,9 @@ serde_with = "3.12"
 thiserror = "2.0"
 paste = { version = "1.0" }
 derive_builder = { version = "0.20", optional = true }
-polars = { version = "0.49", optional = true }
+# TODO: switch back to crates.io once > 0.53.0 gets released
+# see: https://github.com/pola-rs/polars/issues/26694
+polars = { git = "https://github.com/pola-rs/polars.git", rev = "346a793589efd552a6c10c857e0f0434f7e9a7d4", optional = true }
 
 # [dev-dependencies]
 # quickbooks-types = {path=".", features = ["builder"]}
